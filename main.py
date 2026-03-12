@@ -35,14 +35,12 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
-
-    print("Thank you for using this program!\n")
-
     while True:
-        if input("Deseja rodar o programa novamente? (y/n)\n> ").lower() == "y":
-            main()
-        else:
-            print("Goodbye!")
-            print("Made by: @RomanoBoldrin")
+        main()
+        print("Thank you for using this program!\n")
+
+        user_choice = input("Deseja rodar o programa novamente? (y/n)\n> ").lower()
+        if user_choice != "y":
+            print("Have a nice day, goodbye!")
+            print("\n\n=== Made by: @RomanoBoldrin ===\n\n")
             break
