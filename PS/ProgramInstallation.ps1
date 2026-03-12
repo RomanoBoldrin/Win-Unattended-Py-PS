@@ -83,7 +83,7 @@ foreach ($App in $AppList) {
             Write-Log "Failed to install $App. Exit code: $ExitCode" "ERROR"
         }
     } catch {
-        Write-Log "Exception occurred while trying to install $App: $_" "ERROR"
+        Write-Log "Exception occurred while trying to install $App $_" "ERROR"
     }
 }
 

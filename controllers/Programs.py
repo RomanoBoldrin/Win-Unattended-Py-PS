@@ -8,7 +8,7 @@ def run_bloatware_removal() -> dict:
     """
     # 1. Dynamically resolve the script path (Assuming this python file is in the root directory)
     base_dir = os.path.dirname(os.path.abspath(__file__))
-    script_path = os.path.join(base_dir, "PS", "BloatwareRemoval.ps1")
+    script_path = os.path.join(base_dir, "..", "PS", "BloatwareRemoval.ps1")
 
     # 2. Verify the script exists to provide a clear error before execution
     if not os.path.isfile(script_path):
@@ -58,7 +58,7 @@ def run_program_installation() -> dict:
     """
     # 1. Dynamically resolve the script path
     base_dir = os.path.dirname(os.path.abspath(__file__))
-    script_path = os.path.join(base_dir, "PS", "ProgramInstallation.ps1")
+    script_path = os.path.join(base_dir, "..", "PS", "ProgramInstallation.ps1")
 
     # 2. Verify the script exists
     if not os.path.isfile(script_path):
