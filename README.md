@@ -1,0 +1,2 @@
+To compile, specify the `--dispath` providing the destination path for the exe and run:
+`pyinstaller --onefile --console --clean --add-data "PS;PS"  --name WinUnattendedSetup --distpath "destination/path/" main.py`
