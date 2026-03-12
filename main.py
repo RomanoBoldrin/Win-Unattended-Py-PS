@@ -1,6 +1,6 @@
 import questionary
 
-from controllers import run_bloatware_removal, run_program_installation
+from controllers.Programs import run_bloatware_removal, run_program_installation
 
 # Key = the taskname
 # Value = the task to be executed (import on the top of the page)
@@ -28,7 +28,7 @@ def main():
             try:
                 tasks[name]()  # Call the function
             except Exception as e:
-                print(f"❌ Erro ao executar '{name}': {e}")
+                print(f"Erro ao executar '{name}': {e}")
                 input("Pressione Enter para continuar...")
     except Exception as e:
         print("Algo deu errado: ", e)
@@ -38,10 +38,11 @@ if __name__ == "__main__":
     main()
 
     print("Thank you for using this program!\n")
-    print("Deseja rodar o programa novamente? (y/n)")
 
-    if input().lower() == "y":
-        main()
-    else:
-        print("Goodbye!")
-        print("Made by: @RomanoBoldrin")
+    while True:
+        if input("Deseja rodar o programa novamente? (y/n)\n> ").lower() == "y":
+            main()
+        else:
+            print("Goodbye!")
+            print("Made by: @RomanoBoldrin")
+            break
