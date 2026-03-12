@@ -6,7 +6,7 @@ from controllers import run_bloatware_removal, run_program_installation
 # Value = the task to be executed (import on the top of the page)
 tasks = {
     "Remover Bloatware": run_bloatware_removal,
-    "Instalar Programas": run_program_installation
+    "Instalar Programas": run_program_installation,
 }
 
 def main():
@@ -38,4 +38,10 @@ if __name__ == "__main__":
     main()
 
     print("Thank you for using this program!\n")
-    input("Pressione enter para sair...")
+    print("Deseja rodar o programa novamente? (y/n)")
+
+    if input().lower() == "y":
+        main()
+    else:
+        print("Goodbye!")
+        print("Made by: @RomanoBoldrin")
