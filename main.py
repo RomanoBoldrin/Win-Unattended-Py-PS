@@ -1,11 +1,13 @@
 import questionary
 
+from controllers import run_bloatware_removal, run_program_installation
+
 # Key = the taskname
 # Value = the task to be executed (import on the top of the page)
 tasks = {
-    "taskname": taskcode,
+    "Remover Bloatware": run_bloatware_removal,
+    "Instalar Programas": run_program_installation
 }
-
 
 def main():
     '''
