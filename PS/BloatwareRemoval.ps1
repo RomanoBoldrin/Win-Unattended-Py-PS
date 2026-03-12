@@ -151,7 +151,7 @@ foreach ($App in $BloatwareList) {
             Write-Log "Failed to remove $App. Exit code: $ExitCode" "ERROR"
         }
     } catch {
-        Write-Log "Exception occurred while trying to remove $App: $_" "ERROR"
+        Write-Log "Exception occurred while trying to remove $App $_" "ERROR"
     }
 }
 
